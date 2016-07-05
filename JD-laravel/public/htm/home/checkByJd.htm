@@ -1,0 +1,23 @@
+function getPamsForChat(){
+ 	var chatUrl="http://chat.jd.com/jdchat/index.action?token=";
+		open(chatUrl,0,"status=no,toolbar=no,menubar=no,location=no,titlebar=no,resizable=no,width=1018px,height=590");
+}
+function jdChatInit(){
+	if(1==1){
+	    var domain = window.location.hostname;
+		if(domain == "order.jd.com"){
+		    jQuery("#orderTmDiv").append('<a class="im2013" href="#" onclick="getPamsForChat()" title="\u8054\u7cfb\u5ba2\u670d"><strong>\u4eac\u4e1c\u5728\u7ebf\u5ba2\u670d</strong></a>');
+		}else{
+		    jQuery("#orderTmDiv").append('<a class="im" href="#" onclick="getPamsForChat()"><strong>\u4eac\u4e1c\u5728\u7ebf\u5ba2\u670d</strong></a>');
+		}
+	}else if(1==6){
+	    var domain = window.location.hostname;
+		if(domain == "order.jd.com"){
+		     jQuery("#orderTmDiv").append('<a class="im2013off" href="javascript:void(0)" title="\u8054\u7cfb\u5ba2\u670d"><strong>\u4eac\u4e1c\u5728\u7ebf\u5ba2\u670d</strong></a>');
+		}else{
+		     jQuery("#orderTmDiv").append('<a class="im imoff" href="javascript:void(0);" title="\u5ba2\u670d\u79bb\u7ebf\uff0c\u670d\u52a1\u65f6\u95f4\u4e3a\u6bcf\u592909:00-24:00"><strong>\u4eac\u4e1c\u5728\u7ebf\u5ba2\u670d</strong></a>');
+		}
+	}
+}
+jdChatInit();
+ 

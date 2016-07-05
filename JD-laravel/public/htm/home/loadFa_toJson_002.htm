@@ -1,0 +1,49 @@
+	        seajs.use([
+	            'jdf/1.0.0/ui/dialog/1.0.0/dialog',
+	            'jdf/1.0.0/unit/insertStyles/1.0.0/insertStyles',
+	            'jdf/1.0.0/unit/cookie/1.0.0/cookie'], function (dialog, insertStyles, cookie) {
+
+	                (function(){
+
+	                    var url = 'http://sale.jd.com/act/ELDVQqXdkHnp.html';
+	                    var width = parseInt('638'?'638':'600');
+	                    var height = parseInt('488'?'488':'400');
+	                    var autoCloseTime = '10';
+	                    var now = (new Date()).getTime();
+	                    var start = (new Date('2016/4/20 10:00:00')).getTime();
+	                    var end = (new Date('2016/4/21 10:00:00')).getTime();
+
+	                    if (parseInt(cookie('xinfaxian_activity')) == 1 || url == '') { return;}
+
+	                    if (now > start && now < end) {
+
+	                        var style = ''
+	                            +'#activity-dialog a.ui-dialog-close {position:absolute;top:0;right:0;width:40px;height:40px;background:url(//img10.360buyimg.com/da/jfs/t2758/181/139127575/1172/cb1be8d4/5705143aN5c4f0417.png) no-repeat 0 0;cursor:pointer}'
+	                            +'#activity-dialog a.ui-dialog-close:hover {background-image:url(//img20.360buyimg.com/da/jfs/t1960/212/2404936638/1276/c342ce28/57051440N3137a30e.png);}';
+
+	                        insertStyles(style);
+	                        
+	                        $('body').dialog({
+	                            title: null,
+	                            opacity: .3,
+	                            hasCssLink: false,
+	                            width: width,
+	                            height: height,
+	                            fixed: true,
+	                            autoUpdate: true,
+	                            maskIframe: true,
+	                            mainId: 'activity-dialog',
+	                            type: 'iframe',
+	                            source: url,
+	                            autoCloseTime: autoCloseTime,
+	                            onReady: function () {
+	                            	$('#activity-dialog').find('.ui-dialog-close').click(function (){
+										cookie('xinfaxian_activity', '1', {expires: 1});								
+									});
+	                            }
+	                        });
+	                    }
+
+	                })();
+
+	            });
