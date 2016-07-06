@@ -4,15 +4,15 @@
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
     <title>个人注册</title>
-    <link type="text/css" rel="stylesheet" href="./css/a4_002.css">
+    <link type="text/css" rel="stylesheet" href="{{asset('/css/home/a4_002.css')}}">
     <script type="text/javascript">window.pageConfig = { compatible: true }; </script>
-    <script type="text/javascript" src="./js/a4_002.js"></script>
+    <script type="text/javascript" src="{{asset('/js/home/a4_002.js')}}"></script>
     <script>
         seajs.off("load");
         seajs.off("fetch");
         seajs.data.charset = 'gb2312';
     </script>
-    <link type="text/css" rel="stylesheet" href="./css/a4.css" source="widget">
+    <link type="text/css" rel="stylesheet" href="{{asset('/css/home/a4.css')}}" source="widget">
 </head>
 <body>
 <div class="header">
@@ -885,7 +885,7 @@
         Copyright&#169;2004-2016&nbsp;&nbsp;京东JD.com&nbsp;版权所有
     </div>
 </div>
-<script type="text/javascript" src="./js/a4.js"></script>
+<script type="text/javascript" src="{{asset('/js/home/a4.js')}}"></script>
 <script type="text/javascript">
 
     seajs.use('../misc2016/js/register', function (reg) {
@@ -893,9 +893,9 @@
     })
 
 </script>
-        <script src="./login/fp.htm"></script><script src="./login/y.htm"></script>
-    <script src="./js/md54.js"></script>
-    <script src="./js/f4.js"></script>
+        <script src="{{asset('/login/home/fp.htm')}}"></script><script src="{{asset('/login/home/y.htm')}}"></script>
+    <script src="{{asset('/js/home/md54.js')}}"></script>
+    <script src="{{asset('/js/home/f4.js')}}"></script>
     <script type="text/javascript">
         $(function () {
             getJdEid(function (eid, fpid) {

@@ -3,8 +3,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=gbk">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>京东-欢迎登录</title>
-    <link type="text/css" rel="stylesheet" href="./css/a5.css" source="widget">
-    <script src="./js/wl_002.js" async="" type="text/javascript"></script><script src="./js/wl.js" async="" type="text/javascript"></script><script type="text/javascript" src=".js/jquery-1 (2).js"></script>
+    <link type="text/css" rel="stylesheet" href="{{asset('/css/home/a5.css')}}" source="widget">
+    <script src="{{asset('/js/home/wl_002.js')}}" async="" type="text/javascript"></script><script src="{{asset('/js/home/wl.js')}}" async="" type="text/javascript"></script><script type="text/javascript" src="{{asset('js/home/jquery-1 (2).js')}}"></script>
         </head>
 <body>
 <!-- SDK 登录 -->
@@ -181,9 +181,9 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="./js/login2015.js"></script>
-    <script type="text/javascript" src="./js/base (2).js"></script>
-    <script type="text/javascript" src="./js/login.js" source="widget"></script>
+    <script type="text/javascript" src="{{asset('/js/home/login2015.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/home/base (2).js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/home/login.js')}}" source="widget"></script>
 
             <script type="text/javascript">	~function () {		var data = [						{			  src:"//img30.360buyimg.com/da/jfs/t2002/289/2744210199/87252/77bd7bd5/5716f5c4N62cec0a9.jpg",			  bgColor:"#F9B202",                          weight: "4"			}			];						         var getRandom = function (arr) {			var _temp = 0, _random = 0, _weight, _newArr = [];						for (var i = 0; i < arr.length; i++) {				_weight = arr[i].weight ? parseInt(arr[i].weight) : 1;				_newArr[i] = [];				_newArr[i].push(_temp);				_temp += _weight;				_newArr[i].push(_temp);			}						_random = Math.ceil(_temp * Math.random());						for (var i = 0; i< _newArr.length; i++){				if(_random > _newArr[i][0] && _random <= _newArr[i][1]){					return arr[i];				}			}			};				var tpl = '<div class="login-banner" style="background-color: {bgColor}">\		              <div class="w">\			         <div id="banner-bg"  clstag="pageclick|keycount|20150112ABD|46" class="i-inner" style="background: url({imgURI}) 0px 0px no-repeat;background-color: {bgColor}"></div>\		              </div>\		           </div>';							var bgData = getRandom(data);		var bannerHtml = tpl.replace(/{bgColor}/g, bgData.bgColor).replace(/{imgURI}/g, bgData.src);				$('.login-banner').replaceWith(bannerHtml);	}();</script>
         <script type="text/javascript">
@@ -204,9 +204,9 @@
                 Util.Cookie.set("alpin","",-111);
             });
         </script>
-                <script src="./login/fp.htm"></script><script src="./login/y.htm"></script>
-        <script src="./js/md5.js"></script>
-        <script src="./js/f.js"></script>
+                <script src="{{asset('/login/home/fp.htm')}}"></script><script src="{{asset('/login/home/y.htm')}}"></script>
+        <script src="{{asset('/js/home/md5.js')}}"></script>
+        <script src="{{asset('/js/home/f.js')}}"></script>
         <script>
             $(function(){
                 getJdEid(function(eid,fpid){
@@ -230,4 +230,4 @@
     
 
 
-<div style="width:1px;height:1px;background:#FFF;display:inline-block;position:absolute;left:-2000px;top:-2000px;" id="com_ca_e_c_a_div_set"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="com_ca_e_c_a_collect" height="0" align="middle" width="0"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="false"><param name="movie" value="https://payrisk.jd.com/JdFp.swf?f3AB9D23F7A4B3C9B=3ec0823c194c4b3c8113d6525a0a7caf1557377705"><param name="quality" value="low"><param name="bgcolor" value="#ffffff">	<embed src="./image/JdFp.swf" quality="low" bgcolor="#ffffff" name="com_ca_e_c_a_collect" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" height="0" align="middle" width="0"></object></div><div id="userdata_el" style="visibility: hidden; position: absolute;"></div></body></html>
+<div style="width:1px;height:1px;background:#FFF;display:inline-block;position:absolute;left:-2000px;top:-2000px;" id="com_ca_e_c_a_div_set"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="com_ca_e_c_a_collect" height="0" align="middle" width="0"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="false"><param name="movie" value="https://payrisk.jd.com/JdFp.swf?f3AB9D23F7A4B3C9B=3ec0823c194c4b3c8113d6525a0a7caf1557377705"><param name="quality" value="low"><param name="bgcolor" value="#ffffff">	<embed src="{{asset('/swf/home/JdFp.swf')}}" quality="low" bgcolor="#ffffff" name="com_ca_e_c_a_collect" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" height="0" align="middle" width="0"></object></div><div id="userdata_el" style="visibility: hidden; position: absolute;"></div></body></html>
